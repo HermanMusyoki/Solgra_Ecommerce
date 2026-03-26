@@ -1,0 +1,227 @@
+# PYTHON
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+*.pyc
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+.eggs/
+MANIFEST
+
+# VIRTUAL ENVIRONMENT
+venv/
+env/
+ENV/
+.venv/
+.env.bak
+virtualenv/
+.virtualenv/
+Pipfile.lock
+
+# ENVIRONMENT VARIABLES (NEVER commit secrets!)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.json
+
+# DJANGO
+*.log
+*.pot
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Media uploads (user-uploaded files)
+media/
+
+# Static files collected by collectstatic
+staticfiles/
+static_root/
+
+# Django migrations (optional — many teams commit these)
+# Uncomment the lines below ONLY if you want to exclude migrations:
+# */migrations/*.py
+# !*/migrations/__init__.py
+
+# Django cache
+*.cache
+.cache/
+django_cache/
+
+# DATABASE
+*.sql
+*.sqlite
+*.db
+postgres_data/
+pgdata/
+
+# CELERY
+celerybeat-schedule
+celerybeat-schedule.db
+celerybeat.pid
+celery_worker.log
+
+
+# REDIS
+dump.rdb
+redis_data/
+
+# NODE / REACT / VITE (frontend/)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Vite build output
+frontend/dist/
+frontend/dist-ssr/
+frontend/.vite/
+
+# React build
+frontend/build/
+
+# Environment files (React)
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# Package lock files (keep one — remove the others)
+# If using npm, keep package-lock.json and ignore yarn.lock
+yarn.lock
+pnpm-lock.yaml
+
+# Cache
+.npm/
+.eslintcache
+.stylelintcache
+.parcel-cache/
+
+
+# DOCKER
+.dockerignore
+docker-compose.override.yml
+docker-compose.prod.yml
+*.tar
+
+# COVERAGE & TESTING
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+nosetests.xml
+coverage/
+test-results/
+
+# IDEs & EDITORS
+
+# VS Code
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# PyCharm / JetBrains
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim/Neovim
+*.swp
+*.swo
+*~
+.netrwhist
+
+# Emacs
+*#
+.#*
+
+# OPERATING SYSTEM
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# LOGS & TEMP FILES
+logs/
+*.log
+log/
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.backup
+*.orig
+*.rej
+
+# MPESA PAYMENT KEYS
+mpesa_credentials.json
+
+# UPLOADS & GENERATED FILES
+uploads/
+media/products/
+media/avatars/
+media/categories/
+media/brands/
+
+# COMPILED / MINIFIED ASSETS
+*.min.js
+*.min.css
+*.map
+
+# MISCELLANEOUS
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+*.mo
+*.pot
+.ruff_cache/
