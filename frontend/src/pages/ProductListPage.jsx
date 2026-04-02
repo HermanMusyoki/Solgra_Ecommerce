@@ -7,7 +7,8 @@ export default function ProductListPage() {
   useEffect(() => {
     fetch("http://localhost:8000/api/products/")
       .then(res => res.json())
-      .then(data => setProducts(data));
+      .then(data => setProducts(data.results || data))
+      .catch(err => console.error(err));
   }, []);
 
   return (
@@ -17,14 +18,15 @@ export default function ProductListPage() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {products.map(p => (
           <div key={p.id} className="border p-4 rounded shadow">
-            <img src={p.image} alt={p.name} className="h-40 object-cover w-full" />
-            <h2 className="font-bold">{p.name}</h2>
-            <p>KES {p.price}</p>
+            <img
+              src={p.primary_image || "placeholder.jpg"}
+              alt={p.name}
+              className="h-40 w-full object-cover rounded mb-2"
+            />
+            <h2 className="font-bold text-lg">{p.name}</h2>
+            <p className="text-gray-700">KES {p.price}</p>
 
-            <Link
-              to={`/products/${p.id}`}
-              className="text-blue-500"
-            >
+            <Link to={`/products/${p.slug}`} className="text-blue-500 mt-2 inline-block">
               View Details
             </Link>
           </div>
