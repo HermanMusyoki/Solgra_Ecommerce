@@ -21,6 +21,11 @@ class ProductDetailView(generics.RetrieveAPIView):
     serializer_class = ProductDetailSerializer
     lookup_field = 'slug'
 
+    def get_serializer_context(self):
+        context = super().get_serializer_context()
+        context['request'] = self.request
+        return context
+
 class FeaturedProductsView(generics.ListAPIView):
     queryset = Product.objects.filter(is_featured=True, is_active=True)[:8]
     serializer_class = ProductListSerializer
