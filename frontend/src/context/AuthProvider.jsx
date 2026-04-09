@@ -26,8 +26,8 @@ export function AuthProvider({ children }) {
 
   const login = useCallback(async (email, password) => {
     const { data } = await api.post("/accounts/token/", { email, password });
-    localStorage.setItem("access_token",  data.access);
-    localStorage.setItem("refresh_token", data.refresh);
+    localStorage.setItem("access_token",  data.tokens.access);
+    localStorage.setItem("refresh_token", data.tokens.refresh);
     const profile = await api.get("/accounts/me/");
     setUser(profile.data);
     return profile.data;

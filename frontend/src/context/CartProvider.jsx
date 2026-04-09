@@ -20,7 +20,7 @@ export function CartProvider({ children }) {
 
   const calculateTotal = (items) =>
   items.reduce(
-    (sum, i) => sum + Number(i.product.price) * i.quantity,
+    (sum, i) => sum + Number(i?.product?.price || 0) * i.quantity,
     0
   );
 
